@@ -13,8 +13,8 @@ class CreateCharacteristicTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('characteristic')) {
-            Schema::create('characteristic', function (Blueprint $table) {
+        if (!Schema::hasTable('characteristics')) {
+            Schema::create('characteristics', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name', 50);
                 $table->timestamps();
@@ -29,6 +29,6 @@ class CreateCharacteristicTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('characteristic');
+        Schema::dropIfExists('characteristics');
     }
 }

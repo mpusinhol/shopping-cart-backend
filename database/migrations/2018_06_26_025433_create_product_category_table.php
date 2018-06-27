@@ -13,8 +13,8 @@ class CreateProductCategoryTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('product_category')) {
-            Schema::create('product_category', function (Blueprint $table) {
+        if (!Schema::hasTable('product_categories')) {
+            Schema::create('product_categories', function (Blueprint $table) {
                 $table->unsignedInteger('product_id');
                 $table->unsignedInteger('category_id');
                 $table->timestamps();
@@ -33,6 +33,6 @@ class CreateProductCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_category');
+        Schema::dropIfExists('product_categories');
     }
 }

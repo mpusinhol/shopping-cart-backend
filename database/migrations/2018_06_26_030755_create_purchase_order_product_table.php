@@ -13,8 +13,8 @@ class CreatePurchaseOrderProductTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('purchase_order_product')) {
-            Schema::create('purchase_order_product', function (Blueprint $table) {
+        if (!Schema::hasTable('purchase_order_products')) {
+            Schema::create('purchase_order_products', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('purchase_order_id');
                 $table->unsignedInteger('product_id');
@@ -35,6 +35,6 @@ class CreatePurchaseOrderProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchase_order_product');
+        Schema::dropIfExists('purchase_order_products');
     }
 }

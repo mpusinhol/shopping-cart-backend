@@ -13,8 +13,8 @@ class CreateAccountTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('account')) {
-            Schema::create('account', function (Blueprint $table) {
+        if (!Schema::hasTable('accounts')) {
+            Schema::create('accounts', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('first_name', 50);
                 $table->string('middle_name', 100)->nullable();
@@ -35,6 +35,6 @@ class CreateAccountTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account');
+        Schema::dropIfExists('accounts');
     }
 }

@@ -13,8 +13,8 @@ class CreateProductCharacteristicTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('product_characteristic')) {
-            Schema::create('product_characteristic', function (Blueprint $table) {
+        if (!Schema::hasTable('product_characteristics')) {
+            Schema::create('product_characteristics', function (Blueprint $table) {
                 $table->unsignedInteger('product_id');
                 $table->unsignedInteger('characteristic_id');
                 $table->string('value', 50);
@@ -34,6 +34,6 @@ class CreateProductCharacteristicTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_characteristic');
+        Schema::dropIfExists('product_characteristics');
     }
 }

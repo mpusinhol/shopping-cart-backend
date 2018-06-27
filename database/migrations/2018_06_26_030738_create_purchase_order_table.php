@@ -13,8 +13,8 @@ class CreatePurchaseOrderTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('purchase_order')) {
-            Schema::create('purchase_order', function (Blueprint $table) {
+        if (!Schema::hasTable('purchase_orders')) {
+            Schema::create('purchase_orders', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('account_id');
                 $table->double('total', 8, 2);
@@ -33,6 +33,6 @@ class CreatePurchaseOrderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchase_order');
+        Schema::dropIfExists('purchase_orders');
     }
 }
