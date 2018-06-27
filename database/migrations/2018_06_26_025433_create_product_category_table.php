@@ -20,8 +20,8 @@ class CreateProductCategoryTable extends Migration
                 $table->timestamps();
 
                 $table->primary(['product_id', 'category_id']);
-                $table->foreign('product_id')->references('id')->on('product');
-                $table->foreign('category_id')->references('id')->on('category');
+                $table->foreign('product_id')->references('id')->on('products');
+                $table->foreign('category_id')->references('id')->on('categories');
             });
         }
     }

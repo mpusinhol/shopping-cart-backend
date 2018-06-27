@@ -22,8 +22,8 @@ class CreatePurchaseOrderProductTable extends Migration
                 $table->timestamps();
 
                 $table->index(['purchase_order_id', 'product_id']);
-                $table->foreign('purchase_order_id')->references('id')->on('purchase_order');
-                $table->foreign('product_id')->references('id')->on('product');
+                $table->foreign('purchase_order_id')->references('id')->on('purchase_orders');
+                $table->foreign('product_id')->references('id')->on('products');
             });
         }
     }

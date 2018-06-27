@@ -16,12 +16,12 @@ class CreatePurchaseOrderTable extends Migration
         if (!Schema::hasTable('purchase_orders')) {
             Schema::create('purchase_orders', function (Blueprint $table) {
                 $table->increments('id');
-                $table->unsignedInteger('account_id');
+                $table->unsignedInteger('user_id');
                 $table->double('total', 8, 2);
                 $table->timestamps();
 
-                $table->index(['account_id', 'created_at']);
-                $table->foreign('account_id')->references('id')->on('account');
+                $table->index(['user_id', 'created_at']);
+                $table->foreign('user_id')->references('id')->on('users');
             });
         }
     }

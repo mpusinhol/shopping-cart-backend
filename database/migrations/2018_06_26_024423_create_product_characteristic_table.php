@@ -21,8 +21,8 @@ class CreateProductCharacteristicTable extends Migration
                 $table->timestamps();
 
                 $table->primary(['product_id', 'characteristic_id']);
-                $table->foreign('product_id')->references('id')->on('product');
-                $table->foreign('characteristic_id')->references('id')->on('characteristic');
+                $table->foreign('product_id')->references('id')->on('products');
+                $table->foreign('characteristic_id')->references('id')->on('characteristics');
             });
         }
     }
