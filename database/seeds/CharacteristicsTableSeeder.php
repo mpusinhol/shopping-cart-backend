@@ -17,7 +17,6 @@ class CharacteristicsTableSeeder extends Seeder
             ['name' => 'Weight'],
             ['name' => 'Shape'],
             ['name' => 'Quality'],
-            ['name' => 'Shoes'],
             ['name' => 'Fashion Line'],
         ];
 

@@ -18,6 +18,7 @@ class CreateProductCharacteristicTable extends Migration
                 $table->unsignedInteger('product_id');
                 $table->unsignedInteger('characteristic_id');
                 $table->string('value', 50);
+                $table->string('value_type', 50)->nullable();
                 $table->timestamps();
 
                 $table->primary(['product_id', 'characteristic_id']);

@@ -13,7 +13,8 @@ class CategoriesTableSeeder extends Seeder
     {
         $categories = [
             ['name' => 'Food'],
-            ['name' => 'Beauty & Health'],
+            ['name' => 'Health'],
+            ['name' => 'Beauty'],
             ['name' => 'Automotive'],
             ['name' => 'Furniture'],
             ['name' => 'Clothing'],
